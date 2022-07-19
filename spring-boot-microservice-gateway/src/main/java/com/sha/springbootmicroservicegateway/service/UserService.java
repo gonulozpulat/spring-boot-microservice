@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserService implements IUserService{
+public class UserService implements IUserService {
 
     @Autowired
     private IUserRepository userRepository;
@@ -27,8 +27,8 @@ public class UserService implements IUserService{
     }
 
     @Override
-    public Optional<User> findByUserName(String username) {
-        return userRepository.findByUserName(username);
+    public Optional<User> findByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 
     @Override
@@ -36,3 +36,4 @@ public class UserService implements IUserService{
         return userRepository.findAll();
     }
 }
+
